@@ -1,0 +1,596 @@
+/* ============================= MAIN CSS ============================= */
+/* v1.5 - Stable | by @bruno-srio */
+/*
+
+
+ ██████  ██ ████████ ██   ██ ██    ██ ██████      
+██       ██    ██    ██   ██ ██    ██ ██   ██     
+██   ███ ██    ██    ███████ ██    ██ ██████      
+██    ██ ██    ██    ██   ██ ██    ██ ██   ██     
+ ██████  ██    ██    ██   ██  ██████  ██████      
+                                                  
+
+ /$$                                                                           /$$          
+| $$                                                                          |__/          
+| $$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$           /$$$$$$$  /$$$$$$  /$$  /$$$$$$ 
+| $$__  $$ /$$__  $$| $$  | $$| $$__  $$ /$$__  $$ /$$$$$$ /$$_____/ /$$__  $$| $$ /$$__  $$
+| $$  \ $$| $$  \__/| $$  | $$| $$  \ $$| $$  \ $$|______/|  $$$$$$ | $$  \__/| $$| $$  \ $$
+| $$  | $$| $$      | $$  | $$| $$  | $$| $$  | $$         \____  $$| $$      | $$| $$  | $$
+| $$$$$$$/| $$      |  $$$$$$/| $$  | $$|  $$$$$$/         /$$$$$$$/| $$      | $$|  $$$$$$/
+|_______/ |__/       \______/ |__/  |__/ \______/         |_______/ |__/      |__/ \______/ 
+                                                                                            
+                                                                                                                                                                                                                      
+*/
+/* Be advice, this version thing is just for fun. It will be updated soon,
+ so it doesn't matter that much. Helps keep track of progress tho, I guess... */
+/*======================================================================== */
+
+/* Import fonts here: */
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300&display=swap");
+
+/* Reset browser default config */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* outline: greenyellow solid 1px; */
+}
+
+/* ============================= Cores raiz (dark mode e outros) ============================= */
+:root {
+    /* Main colors (Dark mode and others) */
+    --clr-ligth: #FFF2E7;
+    --clr-dark: #121212;
+    /* --clr-dark-hover: #757575; Alterei do cinza para cores complementares */
+    --clr-dark-hover: #E39552;
+    --clr-main-highligth: #02c5c5;
+    --clr-main-highligth-2: #0ff;
+    --clr-main-contrast-1: #005858; 
+    --clr-main-contrast-2: #7e5002; 
+    --clr-primary-borders: #099;  /* #009999 (com o emmet abreviatton torna-se 099) */
+    /* Class colors */
+    --clr-raise-hover: var(--clr-main-highligth-2);
+    --clr-offset-hover: var(--clr-ligth);
+    --clr-offset-border: var(--clr-primary-borders);
+    --clr-offset-focus: var(--clr-primary-borders);
+    --clr-offset-font: var(--clr-main-highligth);
+    --clr-offset-font-hover: var(--clr-dark);
+    /* Other colors */
+    --clr-frame-enabled: var(--clr-primary-borders);
+    --clr-ball-enabled: var(--clr-primary-borders);
+    /* Filters */
+    --filter-logo: invert(35%) sepia(55%) saturate(7500%) hue-rotate(157deg) brightness(95%) contrast(105%);
+}
+
+/* Ligth mode colors */
+.ligthmode{
+    /* Main colors */
+    --clr-ligth: #121212;
+    --clr-dark: #FFF2E7;
+    /* --clr-dark-hover: #b1b1b1; Alterei do cinza para cores complementares */
+    --clr-dark-hover: #52C9E3;
+    --clr-main-highligth: #E39552;
+    --clr-main-highligth-2: #FFB675;
+    --clr-primary-borders: #E39552;
+    /* Class colors */
+    --clr-raise-hover: var(--clr-main-highligth);
+    --clr-offset-hover: var(--clr-ligth);
+    --clr-offset-border: var(--clr-primary-borders);
+    --clr-offset-focus: var(--clr-primary-borders);
+    --clr-offset-font: var(--clr-main-highligth);
+    --clr-offset-font-hover: var(--clr-dark);
+    /* Other colors */
+    --clr-frame-enabled: var(--clr-main-highligth);
+    --clr-ball-enabled: var(--clr-main-highligth);
+    /* Filters */
+    --filter-logo-to-dark: invert(100%);
+    /* Por algum motivo a mudança de filtro não funciona */
+    /* --fiter-logo: invert(58%) sepia(83%) saturate(355%) hue-rotate(344deg) brightness(98%) contrast(81%); */
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\ Desktop version \\\\\\\\\\\\\\\\\\\\\\\\\ */
+html {
+    width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-size: 100%;
+    background-color: var(--clr-dark);
+    /* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header -------------------------- */
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Logo no header */
+header img {
+    height: 72px;
+}
+
+/* Sem que seja necessário o carregamento de outra imagem,
+apliquei um filtro na logo para que fique preta no ligth mode */
+.logo{
+    filter: var(--filter-logo-to-dark);
+}
+
+/* Para alterar a cor é preciso usar o "filter" já que "fill" não funciona em SVG carregado como imagem.
+Para usar o fill, deve-se usar svg in-line aparentemente. */
+.logo:hover {
+    filter: var(--filter-logo);
+}
+
+/* Nav style -------------------------- */
+header nav ul {
+    display: flex;
+    gap: 32px;
+    padding: 1em;
+}
+
+/* Itens de navegação */
+header nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ============================= Switch DARK/LIGTH Mode ============================= */
+input#switcher {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+}
+
+label.ball {
+    /* Largura do frame*/
+    width: 4em;
+    display: flex;
+    border-radius: 50px;
+    position: relative;
+    transition: all 0.5s ease;
+    transform-origin: 20% center;
+    cursor: pointer;
+}
+
+label.ball:before {
+    display: block;
+    width: 2.3em;
+    height: 2.3em;
+    top: 0.25em;
+    left: 0.25em;
+    border-radius: 2em;
+    border: 2px solid var(--clr-dark);
+    transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+}
+
+span.frame .ball {
+    /* Frame background */
+    background-color: transparent;
+    /* Borda do frame */
+    /* border: 3px solid var(--clr-ligth); */
+    border: 3px solid var(--clr-frame-enabled);
+    /* Altura do frame */
+    height: 24px;
+}
+
+/*Checkbox desmarcado --------------------------*/
+span.frame .ball:before {
+    /* Tamanho e posição da bola */
+    width: 0.8em;
+    height: 0.8em;
+    top: -0.02em;
+    left: 0.1px;
+    /* Borda da bola */
+    border: 3px solid var(--clr-dark);
+    /* Cor da bola */
+    background-color: var(--clr-ball-enabled);
+    content: "";
+    position: absolute;
+}
+
+#switcher:not(:checked) ~ .ball:hover {
+    background-color: var(--clr-main-contrast-1);
+    border: var(--clr-main-contrast-1) 3px solid;
+}
+
+/*Checkbox marcado --------------------------*/
+#switcher:checked+.ball:before {
+    transform: translateX(39px);
+    /* Cor da bola */
+    background-color: var(--clr-ball-enabled);
+    /* Borda da bola */
+    border: 3px solid var(--clr-dark);
+    content: "";
+    position: absolute;
+}
+
+#switcher:checked+.ball {
+    /* Borda do frame */
+    /* border: 3px solid var(--clr-ligth); */
+    border: 3px solid var(--clr-frame-enabled);
+}
+
+#switcher:checked+.ball:hover {
+    background-color: var(--clr-main-contrast-2);
+    border: var(--clr-main-contrast-2) 3px solid;
+}
+
+
+/* ============================= Menu links ============================= */
+header nav a {
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-ligth);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+/* Change link color on hover -------------------------- */
+header nav a:hover {
+    /* color: #c2c2c2; */
+    color: var(--clr-dark-hover);
+}
+
+/* Current page -------------------------- */
+header nav .current {
+    color: var(--clr-main-highligth);
+}
+
+
+/* ============================= Main (border and margin) ============================= */
+main {
+    border-top: 2px solid #FFF2E7;
+    border-top-color: var(--clr-ligth);
+    /* border-top-color: #02c5c5; */
+    margin-bottom: 48px;
+}
+
+main section img {
+    height: 430px;
+    padding: 3em;
+}
+
+h4 {
+    border-top: 0.5px solid var(--clr-ligth);
+    padding-top: 48px;
+    font-family: "Righteous", cursive;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--clr-ligth);
+    margin-bottom: 16px;
+}
+
+
+/* ============================= Section 1 ============================= */
+main>section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Content in section 1 -------------------------- */
+main>section>div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 2em;
+}
+
+main>section>div>h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Righteous", cursive;
+    font-weight: 400;
+    font-size: 64px;
+    
+    color: var(--clr-ligth);
+    /* Descobri esse efeito e quis testar */
+    /* text-shadow: 0 0 5px var(--clr-main-highligth), 0 0 25px var(--clr-main-highligth), 0 0 55px var(--clr-main-highligth), 0 0 100px var(--clr-main-highligth); */
+}
+
+main>section>div h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--clr-ligth);
+}
+
+/* h2 turns to bold with another color */
+h2>strong {
+    color: var(--clr-main-highligth);
+}
+
+/* ============================= Portfolio page ============================= */
+main section img {
+    height: 430px;
+    /* width: 430px; */
+    padding: 3em;
+}
+
+article>a{
+    align-items: center;
+    margin: 6em;
+}
+
+/* Quando o link direciona para o youtube o box shadow das imagens com raise2 torna-se vermelho */
+article>a[href^="https://www.youtube.com/watch?v="]>img.raise2:hover{
+    box-shadow: 0 0 1.0625em 0.1875em #FF0000;
+}
+
+article>a[href^="https://github.com/"]>img.raise2:hover{
+    box-shadow: 0 0 1.0625em 0.1875em #6cc644;
+}
+
+article>a[href^="https://color.adobe.com/"]>img.raise2:hover{
+    box-shadow: 0 0 1.0625em 0.1875em #a81fce;
+}
+
+article>a[href^="https://www.kevinpowell.co/"]>img.raise2:hover{
+    box-shadow: 0 0 1.0625em 0.1875em #ba7e46;
+}
+
+
+
+/* ============================= Section 2 =============================  */
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+/* Sobre mim (Título) -------------------------- */
+main section>h3 {
+    border-top: 0.5px solid var(--clr-ligth);
+    padding-top: 48px;
+    font-family: "Righteous", cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--clr-ligth);
+    margin-bottom: 16px;
+}
+
+/* Color the text */
+span {
+    color: var(--clr-main-highligth);
+}
+
+/* Sobre mim (Texto) -------------------------- */
+main section p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--clr-ligth);
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    margin: 2em;
+}
+
+/* ============================= Aside area ============================= */
+main section aside {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Imagens do aside */
+main section aside img {
+    /* outline: #FFF2E7 solid 2px; */
+    height: 300px;
+    padding: 5em;
+    margin: 1em;
+}
+
+/* Formulário -------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 600px;
+    height: 600px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    width: 75%;
+    height: 3em;
+    color: var(--clr-ligth);
+    border-radius: 5px;
+    padding: 0.5em;
+    background: none;
+    border: var(--clr-primary-borders) solid 2px;
+    outline: none;
+}
+
+input:focus {
+    border: var(--clr-ligth) solid 2px;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--clr-ligth);
+    border-radius: 20px;
+    padding: 1em;
+    width: 100%;
+    height: 50%;
+    background: none;
+}
+
+/* Classe para cores de formulários -------------------------- */
+.form {
+    border: var(--clr-ligth) solid 2px;
+    outline: none;
+}
+
+.form:hover,
+.form:focus {
+    border: var(--clr-primary-borders) solid 2px;
+    outline: none;
+}
+
+/* ============================= Sobre page ============================= */
+
+/* Remove visited color from links */
+p a:visited {
+    color: inherit;
+}
+
+
+
+
+
+
+/* ============================= Footer area ============================= */
+footer {
+    padding: 32px;
+    border-top: 2px solid var(--clr-ligth);
+}
+
+/* Imagem do footer */
+footer img {
+    height: 48px;
+    display: flex;
+    /* display: block; */
+    margin: 0 auto;
+}
+
+/* ============================= Classes para efeitos (buttons and links) ============================= */
+
+/* Offset -------------------------- */
+.offset {
+    color: var(--clr-offset-font);
+    /* Estilo */
+    transition: 0.25s;
+    width: 180px;
+    height: 60px;
+    padding: 0 1em 0 1em;
+    border: none;
+    background: none;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    /* Efeitos com box shadow */
+    box-shadow: 0.3em 0.3em 0 0 var(--clr-offset-border), inset 0.3em 0.3em 0 0 var(--clr-offset-border);
+    /* box-shadow: 0.1em 0.1em 1em 0.2em var(--color), inset 0 0 0.2em 0 var(--color); */
+}
+
+.offset:hover,
+.offset:focus {
+    background-color: var(--clr-offset-hover);
+    color: var(--clr-offset-font-hover);
+    font-weight: 800;
+    /* Efeitos com box shadow */
+    box-shadow: 0 0 0 0 var(--clr-offset-hover), inset 6em 3.5em 0 0 var(--clr-offset-hover);
+}
+
+.offset:focus {
+    color: var(--clr-offset-font);
+    background-color: var(--clr-offset-hover);
+}
+
+/* Raise button class -------------------------- */
+.raise {
+    filter: saturate(0%) contrast(0%);
+}
+
+.raise:hover,
+.raise:focus {
+    filter: saturate(100%) contrast(100%);
+    transition: 0.25s;
+    /* box-shadow: 0em 0.5em 0.5em -0.4em var(--clr-raise-hover); */
+    /* box-shadow: 0 0 1.0625em 0.1875em var(--clr-raise-hover); */
+    box-shadow: 0em 0.5em 0.3em -0.4em var(--clr-raise-hover);
+    transform: translateY(-0.25em);
+}
+
+/* Criei essa apenas para poder aplicar os dois box-shadows que criei */
+.raise2 {
+    filter: saturate(0%) contrast(50%);
+}
+
+.raise2:hover,
+.raise2:focus {
+    filter: saturate(100%) contrast(100%);
+    transition: 0.25s;
+    box-shadow: 0 0 1.0625em 0.1875em var(--clr-raise-hover);
+    transform: translateY(-0.25em);
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\ Mobile version \\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (max-width: 600px) {
+    
+    html, body {
+        overflow-x: hidden;
+      }
+      body {
+        position: relative
+      }
+
+    header nav {
+        gap: 1em;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    header nav>ul>li>a {
+        font-size: 16px;
+    }
+
+    header nav>ul {
+        gap: 1em;
+    }
+
+    header nav>ul>li {
+        margin: -2px;
+        text-transform: capitalize;
+    }
+
+    form {
+        padding: 0 8em 0 8em;
+    }
+
+    main>section img {
+        height: 300px;
+        padding: 3em;
+        align-items: center;
+    }
+
+    article img.raise2 {
+        height: 100px;
+        padding: 3em;
+        align-items: center;
+    }
+}
