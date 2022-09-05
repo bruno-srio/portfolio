@@ -19,6 +19,6 @@ Any suggestions or tips would be great and I'll list the ones that I like the mo
 - 
 - 
 
-##Little note:
+## Little note:
 One more thing, just to let everyone know, some comments are written in Brazilian Portuguese, as this is my native language.
 This includes all the portfolio content as well.
