@@ -20,5 +20,5 @@ Any suggestions or tips would be great and I'll list the ones that I like the mo
 - 
 
 ## Little note:
-One more thing, just to let everyone know, some comments are written in Brazilian Portuguese, as this is my native language.
-This includes all the portfolio content as well. If someone have a hard time reading something, I suggest translating or just ignored it. :)
+One more thing, just to let everyone know, some comments are written in Brazilian Portuguese, as this is my native language. 
+This includes all the portfolio content as well. If someone has a hard time reading something, I suggest translating it or just ignoring it. :)
