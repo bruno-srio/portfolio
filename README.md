@@ -5,8 +5,8 @@ that would fit into a real context, like a website for a store, company, portfol
 
 ## How I made it
 I've used only HTML, CSS, and JavaScript to build this website.
-You can check how it looks through this link right here:
-https://bruno-srio.github.io/portfolio/
+You can check how it looks through this link down below:
+- https://bruno-srio.github.io/portfolio/
 
 ## Progress
 So far, the site has a very simple layout due to the time I had to do it,
