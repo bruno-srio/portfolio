@@ -17,3 +17,6 @@ but I do intend to continue developing it over time, adding my projects and expe
 - 
 - 
 - 
+
+#### One more thing, just to let everyone know, some comments are written in Brazilian Portuguese, as this is my native language.
+This includes all the portfolio content as well.
