@@ -9,7 +9,7 @@ You can check how it looks through this link down below:
 - https://bruno-srio.github.io/portfolio/
 
 ## Progress
-So far, the site has a very simple layout due to the time I had to do it,
+So far, the website has a very simple layout due to the time I had to do it,
 but I do intend to continue developing it over time, adding my projects and experiences that I have acquired.
 Any suggestions or tips would be great and I'll list the ones that I like the most down here.
 
