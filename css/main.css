@@ -1,5 +1,5 @@
 /* ============================= MAIN CSS ============================= */
-/* v1.5 - Stable | by @bruno-srio */
+/* v1.6 - Stable | by @bruno-srio */
 /*
 
 
@@ -461,9 +461,10 @@ p a:visited {
     color: inherit;
 }
 
-
-
-
+/* Rounded edges for the profile picture */
+#profilePic {
+    border-radius: 15%;
+}
 
 
 /* ============================= Footer area ============================= */
