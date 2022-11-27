@@ -38,7 +38,7 @@
     /* outline: greenyellow solid 1px; */
 }
 
-/* ============================= Cores raiz (dark mode e outros) ============================= */
+/* ============================= Root colors (dark mode and others) ============================= */
 :root {
     /* Main colors (Dark mode and others) */
     --clr-ligth: #FFF2E7;
@@ -97,13 +97,26 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-size: 100%;
     background-color: var(--clr-dark);
     /* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar-track{
+	background-color: var(--clr-dark);
+}
+
+body::-webkit-scrollbar{
+	width: 10px;
+	background-color: var(--clr-dark);
+}
+
+body::-webkit-scrollbar-thumb{
+	background-color: var(--clr-main-highligth);
 }
 
 /* Header -------------------------- */
@@ -422,12 +435,15 @@ input {
     border-radius: 5px;
     padding: 0.5em;
     background: none;
-    border: var(--clr-primary-borders) solid 2px;
+    border: var(--clr-ligth) solid 2px;
     outline: none;
 }
 
 input:focus {
-    border: var(--clr-ligth) solid 2px;
+    border: var(--clr-primary-borders) solid 2px;
+}
+input:hover {
+    border: var(--clr-primary-borders) solid 2px;
 }
 
 textarea {
