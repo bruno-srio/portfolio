@@ -1,5 +1,5 @@
 /* ============================= MAIN CSS ============================= */
-/* v1.6 - Stable | by @bruno-srio */
+/* Stable | by @bruno-srio */
 /*
 
 
@@ -21,8 +21,6 @@
                                                                                             
                                                                                                                                                                                                                       
 */
-/* Be advice, this version thing is just for fun. It will be updated soon,
- so it doesn't matter that much. Helps keep track of progress tho, I guess... */
 /*======================================================================== */
 
 /* Import fonts here: */
@@ -128,7 +126,7 @@ header {
     justify-content: space-around;
 }
 
-/* Logo no header */
+/* Header logo */
 header img {
     height: 72px;
 }
