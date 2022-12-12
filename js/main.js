@@ -1,6 +1,6 @@
 
 //============================= DARK -> LIGHT theme =============================
-//v1.4 - Stable | by @bruno-srio
+// Stable | by @bruno-srio
 // This code will switch between dark and light mode. :)
 // The mode will change depending on the current mode and the user's preference, saved on local storage. (dark by default, because dark >>>> ligth)
 //---------------------------------------------------------------------------------
@@ -54,11 +54,9 @@ ligthModeToggle.addEventListener("click", () => {
   }
 });
 
-//V1.4 - END
-
-//Updates for v1.5 - by @bruno-srio
+//Updates for later - by @bruno-srio
 //This code will change the mode and the src like the previous version, but this time it will change the src of the images using classes.
 //My ideia is to group all images used on dark mode that need to be changed and change them all at once to the ligth class. 
 //That way I don't need multiple if statements neither to define a constant for each image on each page.
 
-//NOTE: tags can have more than one class, so I can keep the effect one and still group them. I just need to right like this: <img class="raise dark">
+//NOTE: tags can have more than one class, so I can keep the effect one and still group them. I just need to right like this: <img class="raise dark">	
